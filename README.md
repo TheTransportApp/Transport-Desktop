@@ -41,5 +41,10 @@
 <p>Everyone has the abbility to help and improve Transport and to remove bugs.</p>
 </ul>
 
+
 <h4>Usage permission</h4>
 <p>To use Transport it's neccessary to purchase a license for 6,99€ once. Every other usage without a licensed account counts as a piracy copy. As soon as you contribute to Transport you have the opportunity to get a free copy of Transport to develope and test features.</p>
+
+
+<h4>Beta Phase</h4>
+<p>At the moment Transport is in a beta phase. That means only some user can test the software at specific requirements. You can apply as a beta tester on <a href="https://transport-app.com">transport-app.com</a>. Currently there is no published release. If this is the case we'll notify you via Discord, E-Mail or Twitter. Afterwards we'll generate you an inidivual account with which you can use the software.</p>
