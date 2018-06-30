@@ -1,3 +1,5 @@
+![Logo](https://transport-app.com/files/img/logo_colored.png)
+
 # Code of Conduct
 
 ## Our Pledge
