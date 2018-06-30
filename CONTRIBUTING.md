@@ -1,3 +1,5 @@
+![Logo](https://transport-app.com/files/img/logo_colored.png)
+
 # Contributing to Transport
 
 Welcome and thank you for your interest in contributing to the Transport App!

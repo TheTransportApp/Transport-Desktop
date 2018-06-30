@@ -1,3 +1,5 @@
+![Logo](https://transport-app.com/files/img/logo_colored.png)
+
 # Terms of Use
 
 These terms and conditions apply to the project "Transport", especially the open source repositories on Github.
