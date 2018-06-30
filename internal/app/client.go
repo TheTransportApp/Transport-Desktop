@@ -1,4 +1,4 @@
-package app // import "transport-app.com/internal/app"
+package app
 
 import "fmt"
 
