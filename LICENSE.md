@@ -10,7 +10,7 @@ Copyright © 2018 Transport App <[https://transport-app.com/](https://transport-
 
 The Transport App license is a special license created for this application,
 which allows you to view the source code and participate in the project for free,
-but also to distribute paid software licenses for private or commercial purposes.
+but also allows us to distribute paid software licenses for private or commercial purposes.
 
 ## Terms and Conditions
 
