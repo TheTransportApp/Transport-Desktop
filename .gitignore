@@ -89,5 +89,6 @@ modules.xml
 .idea/misc.xml
 *.ipr
 
+debug
 
 # End of https://www.gitignore.io/api/go,code,jetbrains+all

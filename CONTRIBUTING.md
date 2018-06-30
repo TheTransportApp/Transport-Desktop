@@ -81,7 +81,7 @@ Once submitted, your report will go into the issue tracking work flow. Be sure t
 
 ## Contributing Fixes
 
-If you are interested in writing code to fix issues, please see [How to Contribute](https://github.com/AlexanderMandera/Transport-Desktop/wiki) in the wiki.
+If you are interested in writing code to fix issues, please see [How to Contribute](https://github.com/TheTransportApp/Transport-Desktop/wiki) in the wiki.
 
 # Thank You!
 
