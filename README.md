@@ -45,11 +45,11 @@
 </ul>
 
 <h4>Usage Permission</h4>
-<p>To use Transport it's neccessary to purchase a license for 6,99€ once. Every other usage without a licensed account counts as a piracy copy. As soon as you contribute to Transport, you have the opportunity to get a free copy of Transport to develop and test features. You can find more information in the <a href="https://github.com/AlexanderMandera/Transport-Desktop/blob/master/TERMS_OF_USE.md">TERMS_OF_USE.md</a>
+<p>To use Transport it's neccessary to purchase a license for 6,99€ once. Every other usage without a licensed account counts as a piracy copy. As soon as you contribute to Transport, you have the opportunity to get a free copy of Transport to develop and test features. You can find more information in the <a href="https://github.com/TheTransportApp/Transport-Desktop/blob/master/LICENSE.md">TransportApp license (LICENSE.md)</a>.
 
 
 <h4>Beta Phase</h4>
 <p>At the moment Transport is in a beta phase. That means only some users can test the software with specific requirements. You can apply as a beta tester on <a href="https://transport-app.com">transport-app.com</a>. Currently there is no published release. If this is the case we'll notify you via Discord, E-Mail or Twitter. Afterwards we'll generate you an individual account with which you can use the software.</p>
 
 <h4>How to Contribute</h4>
-<p>On how to contribute to our project or write right issues, you can see in <a href="https://github.com/AlexanderMandera/Transport-Desktop/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a>.
+<p>On how to contribute to our project or write right issues, you can see in <a href="https://github.com/TheTransportApp/Transport-Desktop/blob/master/CONTRIBUTING.md">the contributing notes (CONTRIBUTING.md)</a>.
