@@ -3,7 +3,9 @@
   <img src="https://transport-app.com/files/img/logo_colored.png">
 </p>
 <p align="center">You're asking yourself what Transport actually is? Let us explain it to you - it won't take long, we promise.</p>
-
+<p align="center">
+  <a href="https://discord.gg/Mzk8kxY"><img src="https://discordapp.com/api/guilds/455039767151902722/embed.png"></a>
+</p>
 
 <h4>What actually is Transport?</h4>
 <p>Transport is a client for managing your servers and transferring your files. Packed in a stylish design you have the ability to work fast and efficient. Beside the file transfer over FTP, FTPS and SFTP there is also the opportunity to directly manage your server over SSH. This happens with the integrated shell which will open automatically when you connect to a server over SFTP.</p>
