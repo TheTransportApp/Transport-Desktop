@@ -1,4 +1,4 @@
-<h3 align="center">Welcome to</h2>
+<h3 align="center">Welcome to</h3>
 <p align="center">
   <img src="https://transport-app.com/files/img/logo_colored.png">
 </p>
