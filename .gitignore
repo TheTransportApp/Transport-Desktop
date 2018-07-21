@@ -92,3 +92,6 @@ modules.xml
 debug
 
 # End of https://www.gitignore.io/api/go,code,jetbrains+all
+
+.floo
+.flooignore
