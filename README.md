@@ -1,9 +1,11 @@
-<h3 align="center">Welcome to</h2>
+<h3 align="center">Welcome to</h3>
 <p align="center">
   <img src="https://transport-app.com/files/img/logo_colored.png">
 </p>
 <p align="center">You're asking yourself what Transport actually is? Let us explain it to you - it won't take long, we promise.</p>
-
+<p align="center">
+  <a href="https://discord.gg/Mzk8kxY"><img src="https://discordapp.com/api/guilds/455039767151902722/embed.png"></a>
+</p>
 
 <h4>What actually is Transport?</h4>
 <p>Transport is a client for managing your servers and transferring your files. Packed in a stylish design you have the ability to work fast and efficient. Beside the file transfer over FTP, FTPS and SFTP there is also the opportunity to directly manage your server over SSH. This happens with the integrated shell which will open automatically when you connect to a server over SFTP.</p>
@@ -45,11 +47,11 @@
 </ul>
 
 <h4>Usage Permission</h4>
-<p>To use Transport it's neccessary to purchase a license for 6,99€ once. Every other usage without a licensed account counts as a piracy copy. As soon as you contribute to Transport, you have the opportunity to get a free copy of Transport to develop and test features. You can find more information in the <a href="https://github.com/AlexanderMandera/Transport-Desktop/blob/master/TERMS_OF_USE.md">TERMS_OF_USE.md</a>
+<p>To use Transport it's neccessary to purchase a license for 6,99€ once. Every other usage without a licensed account counts as a piracy copy. As soon as you contribute to Transport, you have the opportunity to get a free copy of Transport to develop and test features. You can find more information in the <a href="https://github.com/TheTransportApp/Transport-Desktop/blob/master/LICENSE.md">TransportApp license (LICENSE.md)</a>.
 
 
 <h4>Beta Phase</h4>
 <p>At the moment Transport is in a beta phase. That means only some users can test the software with specific requirements. You can apply as a beta tester on <a href="https://transport-app.com">transport-app.com</a>. Currently there is no published release. If this is the case we'll notify you via Discord, E-Mail or Twitter. Afterwards we'll generate you an individual account with which you can use the software.</p>
 
 <h4>How to Contribute</h4>
-<p>On how to contribute to our project or write right issues, you can see in <a href="https://github.com/AlexanderMandera/Transport-Desktop/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a>.
+<p>On how to contribute to our project or write right issues, you can see in <a href="https://github.com/TheTransportApp/Transport-Desktop/blob/master/CONTRIBUTING.md">the contributing notes (CONTRIBUTING.md)</a>.
