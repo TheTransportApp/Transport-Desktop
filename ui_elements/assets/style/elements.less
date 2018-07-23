@@ -1,0 +1,60 @@
+/* Accent colors */
+@blue: #0E77FF;
+@lightblue: #49B5F1;
+
+/* Mixed colors */
+@red: #FB6158;
+@yellow: #FDC02E;
+@green: #2DCA41;
+
+/* Dark-Mode */
+@dark1: #292C2F;
+@dark2: #2F3136;
+@dark3: #363940;
+
+/* Text colors */
+@grey: #C4C4C4;
+@lightgrey: #F4F4F4;
+
+/* Gradients */
+@bluetolightblue: linear-gradient(to bottom, @lightblue, @blue);
+
+/* <---------------------------> */
+
+/* Window controls */
+#window_controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+
+  &.macos {
+    span {
+      width: 13px;
+      height: 13px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    .close {
+      background: @red;
+    }
+
+    .minimize {
+      background: @yellow;
+    }
+
+    .maximize {
+      background: @green;
+    }
+  }
+}
+
+/* <---------------------------> */
+
+/* Text */
+p {
+  font-size: 15px;
+}

@@ -2,8 +2,57 @@
 <html lang="de">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="assets/style/all.css">
+        <script src="external/jquery/jquery.js"></script>
     </head>
-    <body>
 
+    <body>
+        <div id="window_controls" class="macos">
+            <span class="close"></span>
+            <span class="minimize"></span>
+            <span class="maximize"></span>
+        </div>
+
+        <aside id="main_sidebar">
+            <img src="assets/img/logo_white_png.png" alt="Transport" id="aside_logo">
+            <div id="aside_user">
+                <p>Angemeldet als Marcel Reif <i class="fas fa-angle-down"></i></p>
+
+                <div id="aside_user_actions">
+                    <ul>
+                        <li><a href="">Einstellungen</a></li>
+                        <li><a href="">Abmelden</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="aside_menu">
+                <ul>
+                    <li>
+                        <a class="active">
+                            <img src="assets/img/icons/connection.svg" alt="">
+                            Servermanager
+                        </a>
+                    </li>
+                    <li>
+                        <a href="keymanager.html">
+                            <img src="assets/img/icons/keys.svg" alt="">
+                            SSH Schlüssel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="transfer.html">
+                            <img src="assets/img/icons/transfer.svg" alt="">
+                            Übertragung
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="aside_version">
+                <img src="assets/img/logo_truck_png.png" alt="">
+                <p>V1.0.0 Beta</p>
+            </div>
+        </aside>
+
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
