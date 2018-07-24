@@ -246,6 +246,9 @@ p {
   color: #C4C4C4;
   opacity: 0.65;
 }
+p.small {
+  font-size: 13px;
+}
 /* <---------------------------> */
 /* Headings */
 h1,
@@ -269,7 +272,19 @@ h3 {
   font-family: 'Montserrat', 'Open Sans', 'Arial', 'sans-serif';
   font-weight: 600;
 }
+/* <---------------------------> */
+/* Buttons */
+.btn {
+  font-size: 14px;
+  color: white;
+  border-radius: 3px;
+  padding: 5px 15px;
+}
+.btn.blue {
+  background: #49B5F1;
+}
 #servermanager_serverlist {
+  display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   margin: -15px;
 }
@@ -293,8 +308,77 @@ h3 {
 #servermanager_serverlist .server_information h3 {
   margin-bottom: 8px;
 }
-#servermanager_serverlist .server_information p {
+#servermanager_serverlist .server_information .server_action {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+#servermanager_serverlist .server_information .server_action i {
+  margin: 5px 0 0 5px;
+}
+#servermanager_serverlist .server_information .server_action:hover .server_action_dropdown {
+  margin-top: -15px;
+  opacity: 1;
+  transform: scale(1);
+}
+#servermanager_serverlist .server_information .server_action .server_action_dropdown {
+  position: absolute;
+  text-align: center;
+  margin-top: 15px;
+  opacity: 0;
+  transform: scale(0);
+}
+#servermanager_serverlist .server_information .server_action .server_action_dropdown:before {
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  transform: rotate(45deg) translateX(-50%);
+  content: '';
+  top: 18px;
+  background: white;
+  border: 1px solid #eeeeee;
+  border-right: none;
+  border-bottom: none;
+  z-index: -1;
+}
+#servermanager_serverlist .server_information .server_action .server_action_dropdown ul {
   margin: 0;
+  padding: 20px 0 0 0;
+  list-style: none;
+}
+#servermanager_serverlist .server_information .server_action .server_action_dropdown ul li {
+  color: #C4C4C4;
+  font-size: 12px;
+  padding: 8px 20px 8px 20px;
+  font-weight: 400;
+  margin: 0;
+  background: white;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+#servermanager_serverlist .server_information .server_action .server_action_dropdown ul li:hover {
+  background: #f5f5f5;
+}
+#servermanager_serverlist .server_information .server_action .server_action_dropdown ul li:first-of-type {
+  padding-top: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top: 1px solid #eeeeee;
+}
+#servermanager_serverlist .server_information .server_action .server_action_dropdown ul li:last-of-type {
+  padding-bottom: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom: 1px solid #eeeeee;
+}
+#servermanager_serverlist .server_information p {
+  margin: 0 0 5px 0;
+}
+#servermanager_serverlist .server_information p i {
+  margin-right: 5px;
 }
 #main_sidebar {
   height: 100%;
@@ -348,8 +432,12 @@ h3 {
   border-radius: 3px;
   transform: rotate(45deg);
   content: '';
-  top: 10px;
+  top: 9px;
   background: white;
+  border: 1px solid #eeeeee;
+  border-right: none;
+  border-bottom: none;
+  z-index: -1;
 }
 #main_sidebar #aside_user_actions ul {
   margin: 0;
@@ -359,21 +447,26 @@ h3 {
 #main_sidebar #aside_user_actions ul li {
   color: #C4C4C4;
   font-size: 12px;
-  padding: 3px 20px 3px 20px;
+  padding: 8px 20px 8px 20px;
   font-weight: 400;
   margin: 0;
   background: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eeeeee;
+}
+#main_sidebar #aside_user_actions ul li:hover {
+  background: #f5f5f5;
 }
 #main_sidebar #aside_user_actions ul li:first-of-type {
   padding-top: 8px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  border-bottom: none;
 }
 #main_sidebar #aside_user_actions ul li:last-of-type {
   padding-bottom: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  border-top: none;
 }
 #main_sidebar #aside_menu ul {
   padding: 0;
@@ -423,5 +516,31 @@ h3 {
   color: white;
   font-weight: 500;
   font-size: 15px;
+}
+body#dark {
+  background: #2F3136;
+}
+body#dark #main_sidebar {
+  background: #292C2F;
+  opacity: 1;
+}
+body#dark #main_sidebar #aside_logo {
+  opacity: 0.75;
+}
+body#dark #main_sidebar #aside_user_actions li {
+  background: #363940;
+}
+body#dark #main_sidebar #aside_user_actions li:hover {
+  background: #292b32 !important;
+}
+body#dark #servermanager .server_action_dropdown li {
+  background: #363940;
+}
+body#dark #servermanager .server_action_dropdown li:hover {
+  background: #292b32 !important;
+}
+body#dark #servermanager .server_image {
+  background: #474a54;
+  opacity: 0.75;
 }
 /*# sourceMappingURL=all.css.map */
