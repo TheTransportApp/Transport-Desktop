@@ -1,0 +1,11 @@
+#servermanager_serverlist {
+  grid-template-columns: 25% 25% 25% 25%;
+  margin: -15px;
+}
+#servermanager_serverlist .child {
+  margin: 15px;
+}
+#servermanager_serverlist .server_image {
+  height: 27px;
+}
+/*# sourceMappingURL=servermanager.css.map */

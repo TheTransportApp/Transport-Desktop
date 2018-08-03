@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="assets/style/all.css">
+        <script src="external/jquery/jquery.js"></script>
+    </head>
+
+    <body id="dark">
+        <div id="window_controls" class="macos">
+            <span class="close"></span>
+            <span class="minimize"></span>
+            <span class="maximize"></span>
+        </div>
+
+        <aside id="main_sidebar">
+            <img src="assets/img/logo_white_png.png" alt="Transport" id="aside_logo">
+            <div id="aside_user">
+                <p>Angemeldet als Marcel Reif <i class="fas fa-angle-down"></i></p>
+
+                <div id="aside_user_actions">
+                    <ul>
+                        <li><a href="">Einstellungen</a></li>
+                        <li><a href="">Abmelden</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="aside_menu">
+                <ul>
+                    <li>
+                        <a class="active">
+                            <img src="assets/img/icons/svg/connection.svg" alt="">
+                            Servermanager
+                        </a>
+                    </li>
+                    <li>
+                        <a href="keymanager.html">
+                            <img src="assets/img/icons/svg/keys.svg" alt="">
+                            SSH Schlüssel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="transfer.html">
+                            <img src="assets/img/icons/svg/transfer.svg" alt="">
+                            Übertragung
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="aside_version">
+                <img src="assets/img/logo_truck_png.png" alt="">
+                <p>V1.0.0 Beta</p>
+            </div>
+        </aside>
+
+        <main id="servermanager">
+            <header>
+                <h1>Servermanager</h1>
+                <p>Server erstellen, verwalten oder entfernen.</p>
+            </header>
+
+            <div class="grid" id="servermanager_serverlist">
+                <div class="child">
+                    <img src="assets/img/icons/png/connection.png" alt="" class="server_image">
+                    <div class="server_information">
+                        <h3 class="server_title">Mein Server</h3>
+                        <p class="server_time_add small"><i class="fas fa-calendar fa-fw"></i>Hinzugefügt am: 15.07.2018</p>
+                        <p class="server_ip small"><i class="fas fa-sitemap fa-fw"></i>IP: 192.168.2.1</p>
+                        <p class="server_connection_type small"><i class="fas fa-server fa-fw"></i>Typ: SFTP</p>
+
+                        <div class="server_action">
+                            <p>Aktion<i class="fas fa-angle-down"></i></p>
+
+                            <div class="server_action_dropdown">
+                                <ul>
+                                    <li><a href="">Bearbeiten</a></li>
+                                    <li><a href="">Entfernen</a></li>
+                                    <li><a href="">Verbinden</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
