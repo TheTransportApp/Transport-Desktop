@@ -1,0 +1,41 @@
+body {
+  &#dark {
+    background: @dark2;
+
+    #main_sidebar {
+      background: @dark1;
+      opacity: 1;
+
+      #aside_logo {
+        opacity: .75;
+      }
+
+      #aside_user_actions {
+        li {
+          background: @dark3;
+
+          &:hover {
+            background: #292b32 !important;
+          }
+        }
+      }
+    }
+
+    #servermanager {
+      .server_action_dropdown {
+        li {
+          background: @dark3;
+
+          &:hover {
+            background: #292b32 !important;
+          }
+        }
+      }
+
+      .server_image {
+        background: #474a54;
+        opacity: .75;
+      }
+    }
+  }
+}

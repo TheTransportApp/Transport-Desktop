@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213.136 43">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        font-size: 35px;
+        font-family: Montserrat-BoldItalic, Montserrat;
+        font-weight: 700;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+  <g id="Gruppe_1" data-name="Gruppe 1" transform="translate(-2)">
+    <text id="Transport" class="cls-1" transform="translate(34.136 34)"><tspan x="0" y="0">Transport</tspan></text>
+    <rect id="Rechteck_1" data-name="Rechteck 1" class="cls-2" width="21.065" height="4.427" rx="2.214" transform="translate(7.085 9.832)"/>
+    <rect id="Rechteck_2" data-name="Rechteck 2" class="cls-2" width="29.055" height="4.427" rx="2.214" transform="translate(2 20.163)"/>
+    <rect id="Rechteck_3" data-name="Rechteck 3" class="cls-2" width="24.697" height="4.427" rx="2.214" transform="translate(9.264 30.494)"/>
+  </g>
+</svg>
