@@ -16,7 +16,6 @@ var RootCmd = &cobra.Command{
 	Long:	"This application is a modern (S)FTP and SSH client based on Golang",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Launching UI ...")
-		// Launch UI
 	},
 }
 

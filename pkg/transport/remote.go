@@ -17,10 +17,13 @@ type Remote interface {
 	ListContent()
 
 	// Copy a local file to remote server
-	CopyToRemote(source os.File, destination string) bool
+	CopyToRemote(source string, destination string) bool
 
 	// Copy a remote file to local path
-	CopyToLocal(source string, destination os.File) bool
+	CopyToLocal(source string, destination string) bool
+
+	// Rename file on remote server
+	Rename(oldName string, newName string) bool
 
 	// Delete file on remote server
 	Delete(path string) bool
