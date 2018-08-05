@@ -1,0 +1,41 @@
+<aside id="main_sidebar">
+  <img src="assets/img/logo_white_png.png" alt="Transport" id="aside_logo">
+  <div id="aside_user">
+    <p>Angemeldet als Transport User <i class="fas fa-angle-down"></i></p>
+
+    <div id="aside_user_actions">
+      <ul>
+        <li><a href="">Einstellungen</a></li>
+        <li><a href="">Abmelden</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="aside_menu">
+    <ul>
+      <li>
+        <a routerLink="/server-manager" routerLinkActive="active">
+          <img src="assets/img/icons/svg/connection.svg" alt="">
+          Servermanager
+        </a>
+      </li>
+      <li>
+        <a routerLink="/keys" routerLinkActive="active">
+          <img src="assets/img/icons/svg/keys.svg" alt="">
+          SSH Schlüssel
+        </a>
+      </li>
+      <li>
+        <a routerLink="/transfer" routerLinkActive="active">
+          <img src="assets/img/icons/svg/transfer.svg" alt="">
+          Übertragung
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div id="aside_version">
+    <img src="assets/img/logo_truck_png.png" alt="">
+    <p>V1.0.0 Beta</p>
+  </div>
+</aside>
+
+<router-outlet></router-outlet>

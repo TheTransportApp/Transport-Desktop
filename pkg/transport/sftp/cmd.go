@@ -1,6 +1,9 @@
 package sftp
 
-import "fmt"
+import (
+	"fmt"
+	cli2 "github.com/thetransportapp/transport-desktop/pkg/transport/cli"
+)
 
 type SftpCommand struct {
 	Host string
@@ -21,4 +24,7 @@ func (cmd SftpCommand) Connect() {
 	} else {
 		fmt.Println("Connection failed")
 	}
+
+	cli := cli2.CLI{}
+	cli.ShowCLI()
 }
