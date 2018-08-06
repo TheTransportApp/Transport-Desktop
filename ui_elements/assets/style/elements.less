@@ -181,32 +181,46 @@ form {
   label {
     font-size: 15px;
     color: @grey;
-    display: block;
-    margin-bottom: 8px;
+    margin: 0;
   }
 
   input {
-    display: block;
-    box-shadow: none;
-    font-size: 13px;
-    width: 100%;
     font-family: 'Open Sans', 'Arial', 'sans-serif';
-    color: #6b7176;
-    margin-bottom: 15px;
-    padding: 5px;
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 13px;
+    padding: 10px 0 15px 0;
+    resize: vertical;
     outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: 1px #ddd solid;
-    border-radius: 3px;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
+    color: #979797;
 
-    &:focus {
-      border-color: @blue;
+    &:focus + span:after {
+      transform: scaleX(1);
+      background: @blue;
+    }
+  }
+
+  span {
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: #ddd;
+    margin-bottom: 15px;
+
+    &:after {
+      display: block;
+      width: 100%;
+      transform: scaleX(0);
+      margin-top: -2px;
+      content: '';
+      height: 2px;
+      transform-origin: left;
+      -webkit-transition: .5s transform;
+      -moz-transition: .5s transform;
+      -ms-transition: .5s transform;
+      -o-transition: .5s transform;
+      transition: .5s transform;
     }
   }
 
