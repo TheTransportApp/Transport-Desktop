@@ -22,11 +22,17 @@
 /* <---------------------------> */
 
 /* Window controls */
-#window_controls {
+.window_controls {
   position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 1000;
+  z-index: 2;
+
+  &.relative {
+    position: relative;
+    top: -5px;
+    left: 0;
+  }
 
   &.macos {
     span {
@@ -95,8 +101,117 @@ h3 {
   color: white;
   border-radius: 3px;
   padding: 5px 15px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
 
   &.blue {
     background: @lightblue;
+
+    &:hover {
+      background: #3e99cc;
+    }
+  }
+}
+
+/* <---------------------------> */
+
+/* Modals */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+  z-index: -1;
+
+  &.visible {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  .content {
+    max-height: 90%;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    padding: 26px;
+
+    .window_controls {
+      margin-bottom: 10px;
+    }
+
+    &.small {
+      width: 380px;
+    }
+
+    &.medium {
+      width: 640px;
+    }
+
+    &.large {
+      width: 960px;
+    }
+
+    &.visible {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
+}
+
+/* <---------------------------> */
+
+/* Form */
+form {
+  label {
+    font-size: 15px;
+    color: @grey;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input {
+    display: block;
+    box-shadow: none;
+    font-size: 13px;
+    width: 100%;
+    font-family: 'Open Sans', 'Arial', 'sans-serif';
+    color: #6b7176;
+    margin-bottom: 15px;
+    padding: 5px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px #ddd solid;
+    border-radius: 3px;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+
+    &:focus {
+      border-color: @blue;
+    }
+  }
+
+  button {
+    font-family: 'Open Sans', 'Arial', 'sans-serif';
+    border: none;
   }
 }
