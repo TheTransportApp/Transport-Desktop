@@ -2,7 +2,7 @@ package sftp
 
 import (
 	"fmt"
-	cli2 "github.com/thetransportapp/transport-desktop/pkg/transport/cli"
+	commandline "github.com/thetransportapp/transport-desktop/pkg/transport/cli"
 )
 
 type SftpCommand struct {
@@ -25,6 +25,6 @@ func (cmd SftpCommand) Connect() {
 		fmt.Println("Connection failed")
 	}
 
-	cli := cli2.CLI{}
+	cli := commandline.CLI{}
 	cli.ShowCLI()
 }

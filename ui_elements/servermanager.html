@@ -7,7 +7,7 @@
     </head>
 
     <body id="dark">
-        <div id="window_controls" class="macos">
+        <div class="macos window_controls">
             <span class="close"></span>
             <span class="minimize"></span>
             <span class="maximize"></span>
@@ -54,6 +54,34 @@
         </aside>
 
         <main id="servermanager">
+            <div class="modal visible">
+                <div class="content small visible">
+                    <div class="macos window_controls relative">
+                        <span class="close"></span>
+                        <span class="minimize"></span>
+                        <span class="maximize"></span>
+                    </div>
+
+                    <form id="edit_server">
+                        <label for="name">Name</label>
+                        <input id="name" placeholder="Mein Server">
+
+                        <label for="address">Adresse</label>
+                        <input id="address" placeholder="msr-webdesign.de">
+
+                        <label for="user">Benutzer</label>
+                        <input id="user" placeholder="root">
+
+                        <label for="password">Passwort</label>
+                        <input id="password" type="password" placeholder="Passwort">
+
+                        <br>
+
+                        <button class="btn blue">Speichern</button>
+                    </form>
+                </div>
+            </div>
+
             <header>
                 <h1>Servermanager</h1>
                 <p>Server erstellen, verwalten oder entfernen.</p>

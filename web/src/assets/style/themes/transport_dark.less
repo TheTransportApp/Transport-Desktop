@@ -37,5 +37,42 @@ body {
         opacity: .75;
       }
     }
+
+    #transfer {
+      #transfer_status {
+        background: @dark3;
+      }
+
+      #transfer_controls {
+        i {
+          background: @dark3;
+          border-color: #5e626a;
+        }
+      }
+    }
+
+    .modal {
+      .content {
+        background: @dark3;
+      }
+    }
+
+    form {
+      input {
+        border-color: @grey;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      background: transparent;
+      width: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
   }
 }

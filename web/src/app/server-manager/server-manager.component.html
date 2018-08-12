@@ -1,4 +1,82 @@
 <main id="servermanager">
+  <div class="modal" [ngClass]="{'visible': this.deleteConfirmation }">
+    <div class="content small" [ngClass]="{'visible': this.deleteConfirmation }">
+      <div class="window_control">
+        <img src="assets/img/icons/close.svg" alt="" class="close modal_closer" (click)="closeDeleteConfirmation()">
+      </div>
+      <div class="modal_content">
+        <h2>Verbindung entfernen</h2>
+        <p>Sind Sie sicher, dass Sie diese Verbindung entfernen möchten?</p>
+
+        <form>
+          <button class="btn blue" (click)="removeServer(this.deletingServer)">Bestätigen</button>
+          <button class="btn white with_border" (click)="closeDeleteConfirmation()">Abbrechen</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" [ngClass]="{'visible': this.modalOpened }">
+    <div class="content small" [ngClass]="{'visible': this.modalOpened }">
+      <div class="macos window_controls relative">
+        <span class="close" (click)="closeEditModal()"></span>
+        <span class="minimize" (click)="closeEditModal()"></span>
+        <span class="maximize"></span>
+      </div>
+      <div class="modal_content">
+        <h2>Verbindung hinzufügen</h2>
+        <p>Hinzufügen einer weiteren Verbindung.</p>
+
+        <form>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Mein Server" [(ngModel)]="this.formName">
+
+          <label for="address">Adresse</label>
+          <input id="address" name="address" type="text" placeholder="192.168.2.1" [(ngModel)]="this.formAddress">
+
+          <label for="username">Benutzername</label>
+          <input id="username" name="username" type="text" placeholder="Root" [(ngModel)]="this.formUsername">
+
+          <label for="password">Passwort</label>
+          <input id="password" name="password" type="password" placeholder="Passwort" [(ngModel)]="this.formPassword">
+
+          <button class="btn blue" (click)="addServer()">Übernehmen</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" [ngClass]="{'visible': this.editingServer }">
+    <div class="content small" [ngClass]="{'visible': this.editingServer }">
+      <div class="macos window_controls relative">
+        <span class="close" (click)="closeEditModal()"></span>
+        <span class="minimize" (click)="closeEditModal()"></span>
+        <span class="maximize"></span>
+      </div>
+      <div class="modal_content">
+        <h2>Verbindung bearbeiten</h2>
+
+        <form id="edit_server">
+          <label for="ename">Name</label>
+          <input id="ename" name="name" type="text" placeholder="Mein Server" [(ngModel)]="this.formName" required>
+
+          <label for="eaddress">Adresse</label>
+          <input id="eaddress" name="address" type="text" placeholder="192.168.2.1" [(ngModel)]="this.formAddress"
+                 required>
+
+          <label for="eusername">Benutzername</label>
+          <input id="eusername" name="username" type="text" placeholder="Root" [(ngModel)]="this.formUsername" required>
+
+          <label for="epassword">Passwort</label>
+          <input id="epassword" name="password" type="password" placeholder="Passwort" [(ngModel)]="this.formPassword"
+                 required>
+
+          <button class="btn blue" (click)="saveEdit()">Übernehmen</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <header>
     <h1>Servermanager</h1>
     <p>Server erstellen, verwalten oder entfernen.</p>
@@ -27,76 +105,5 @@
       </div>
     </div>
   </div>
+
 </main>
-
-<div class="modal" [ngClass]="{'visible': this.deleteConfirmation }">
-  <div class="content small" [ngClass]="{'visible': this.deleteConfirmation }">
-    <div class="window_control">
-      <img src="assets/img/icons/close.svg" alt="" class="close modal_closer" (click)="closeDeleteConfirmation()">
-    </div>
-    <div class="modal_content">
-      <h2>Verbindung entfernen</h2>
-      <p>Sind Sie sicher, dass Sie diese Verbindung entfernen möchten?</p>
-
-      <form>
-        <button class="btn medium blue" (click)="removeServer(this.deletingServer)">Bestätigen</button>
-        <button class="btn medium white with_border" (click)="closeDeleteConfirmation()">Abbrechen</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<div class="modal" [ngClass]="{'visible': this.modalOpened }">
-  <div class="content small" [ngClass]="{'visible': this.modalOpened }">
-    <div class="window_control">
-      <img src="assets/img/icons/close.svg" alt="" class="close modal_closer" (click)="closeModal()">
-    </div>
-    <div class="modal_content">
-      <h2>Verbindung hinzufügen</h2>
-      <p>Hinzufügen einer weiteren Verbindung.</p>
-
-      <form>
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Mein Server" [(ngModel)]="this.formName">
-
-        <label for="address">Adresse</label>
-        <input id="address" name="address" type="text" placeholder="192.168.2.1" [(ngModel)]="this.formAddress">
-
-        <label for="username">Benutzername</label>
-        <input id="username" name="username" type="text" placeholder="Root" [(ngModel)]="this.formUsername">
-
-        <label for="password">Passwort</label>
-        <input id="password" name="password" type="password" placeholder="Passwort" [(ngModel)]="this.formPassword">
-
-        <button class="btn medium blue" (click)="addServer()">Übernehmen</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<div class="modal" [ngClass]="{'visible': this.editingServer }">
-  <div class="content small" [ngClass]="{'visible': this.editingServer }">
-    <div class="window_control">
-      <img src="assets/img/icons/close.svg" alt="" class="close modal_closer" (click)="closeEditModal()">
-    </div>
-    <div class="modal_content">
-      <h2>Verbindung bearbeiten</h2>
-
-      <form>
-        <label for="ename">Name</label>
-        <input id="ename" name="name" type="text" placeholder="Mein Server" [(ngModel)]="this.formName" required>
-
-        <label for="eaddress">Adresse</label>
-        <input id="eaddress" name="address" type="text" placeholder="192.168.2.1" [(ngModel)]="this.formAddress" required>
-
-        <label for="eusername">Benutzername</label>
-        <input id="eusername" name="username" type="text" placeholder="Root" [(ngModel)]="this.formUsername" required>
-
-        <label for="epassword">Passwort</label>
-        <input id="epassword" name="password" type="password" placeholder="Passwort" [(ngModel)]="this.formPassword" required>
-
-        <button class="btn medium blue" (click)="saveEdit()">Übernehmen</button>
-      </form>
-    </div>
-  </div>
-</div>

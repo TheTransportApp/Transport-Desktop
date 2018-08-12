@@ -1,1 +1,87 @@
-SSH-Schlüssel
+<main id="servermanager">
+  <div class="modal" [ngClass]="{'visible': this.deleteConfirmation }">
+    <div class="content small" [ngClass]="{'visible': this.deleteConfirmation }">
+      <div class="window_control">
+        <img src="assets/img/icons/close.svg" alt="" class="close modal_closer" (click)="closeDeleteConfirmation()">
+      </div>
+      <div class="modal_content">
+        <h2>Key entfernen</h2>
+        <p>Sind Sie sicher, dass Sie diesen Key entfernen möchten?</p>
+
+        <form>
+          <button class="btn blue">Bestätigen</button>
+          <button class="btn white with_border">Abbrechen</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="content small">
+      <div class="macos window_controls relative">
+        <span class="close"></span>
+        <span class="minimize"></span>
+        <span class="maximize"></span>
+      </div>
+      <div class="modal_content">
+        <h2>Key generieren</h2>
+        <p>Generieren eines neuen SSH-Keys.</p>
+
+        <form>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Mein Server">
+
+          <button class="btn blue">Übernehmen</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="content small">
+      <div class="macos window_controls relative">
+        <span class="close"></span>
+        <span class="minimize"></span>
+        <span class="maximize"></span>
+      </div>
+      <div class="modal_content">
+        <h2>Key bearbeiten</h2>
+
+        <form id="edit_server">
+          <label for="ename">Name</label>
+          <input id="ename" name="name" type="text" placeholder="Mein Server"  required>
+
+          <button class="btn blue">Übernehmen</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <h1>SSH-Schlüssel</h1>
+    <p>SSH-Keys erstellen, hinzufügen oder entfernen.</p>
+  </header>
+
+  <div class="grid" id="servermanager_serverlist">
+    <div class="child" *ngFor="let server of servers">
+      <img src="assets/img/icons/png/connection.png" alt="" class="server_image">
+      <div class="server_information">
+        <h3 class="server_title">{{server.name}}</h3>
+        <p class="server_time_add small"><i class="fas fa-calendar fa-fw"></i>Hinzugefügt am: {{server.added}}</p>
+
+        <div class="server_action">
+          <p>Aktion<i class="fas fa-angle-down"></i></p>
+
+          <div class="server_action_dropdown">
+            <ul>
+              <li><a>Bearbeiten</a></li>
+              <li><a>Entfernen</a></li>
+              <li><a href="">Public-Key kopieren</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
