@@ -17,13 +17,32 @@ a {
   text-decoration: none;
 }
 main {
-  width: calc(100% - 350px);
+  width: calc(100% - 345px);
+  height: 100%;
   vertical-align: top;
   display: inline-block;
   padding: 60px;
+  position: relative;
 }
 header {
-  margin-bottom: 55px;
+  margin-bottom: 45px;
+}
+header.small {
+  margin-bottom: 15px;
+}
+header p {
+  margin-bottom: 0;
+}
+::-webkit-scrollbar {
+  background: transparent;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 /* montserrat-100 - latin */
 @font-face {
@@ -228,11 +247,11 @@ header {
   left: 0;
 }
 .window_controls.macos span {
-  width: 13px;
-  height: 13px;
+  width: 12px;
+  height: 12px;
   border-radius: 100px;
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 3px;
   cursor: pointer;
 }
 .window_controls.macos .close {
@@ -343,7 +362,7 @@ h3 {
 }
 .modal .content.visible {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(1);
 }
 /* <---------------------------> */
 /* Form */
@@ -356,41 +375,32 @@ form input {
   font-family: 'Open Sans', 'Arial', 'sans-serif';
   width: 100%;
   background: none;
-  border: none;
-  font-size: 13px;
-  padding: 10px 0 15px 0;
+  font-size: 12px;
+  padding: 7px;
   resize: vertical;
   outline: none;
   color: #979797;
-}
-form input:focus + span:after {
-  transform: scaleX(1);
-  background: #0E77FF;
-}
-form span {
-  width: 100%;
-  height: 2px;
+  border: 2px #e9e9e9 solid;
+  margin: 5px 0 15px 0;
   display: block;
-  background: #ddd;
-  margin-bottom: 15px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
-form span:after {
-  display: block;
-  width: 100%;
-  transform: scaleX(0);
-  margin-top: -2px;
-  content: '';
-  height: 2px;
-  transform-origin: left;
-  -webkit-transition: 0.5s transform;
-  -moz-transition: 0.5s transform;
-  -ms-transition: 0.5s transform;
-  -o-transition: 0.5s transform;
-  transition: 0.5s transform;
+form input:focus {
+  border-color: #afd3ff;
 }
 form button {
   font-family: 'Open Sans', 'Arial', 'sans-serif';
   border: none;
+}
+/* <---------------------------> */
+/* Grid */
+.grid {
+  display: grid;
 }
 #servermanager_serverlist {
   display: grid;
@@ -488,6 +498,138 @@ form button {
 }
 #servermanager_serverlist .server_information p i {
   margin-right: 5px;
+}
+#transfer #transfer_connections {
+  display: flex !important;
+  margin: 0 -30px;
+  height: calc(100% - 420px);
+}
+#transfer #transfer_connections h3 {
+  margin-bottom: 20px;
+}
+#transfer #transfer_connections .child {
+  margin: 0 30px;
+  flex: 1;
+}
+#transfer #transfer_connections .child .objects {
+  overflow-y: auto;
+  max-height: calc(100% - 82px);
+}
+#transfer #transfer_connections .child table {
+  width: 100%;
+  table-layout: fixed;
+}
+#transfer #transfer_connections .child table th {
+  text-align: left;
+  font-weight: normal;
+  color: #C4C4C4;
+  font-size: 13px;
+}
+#transfer #transfer_connections .child table th:last-of-type {
+  text-align: right;
+}
+#transfer #transfer_connections .child table td {
+  color: #C4C4C4;
+  font-size: 13px;
+  padding: 5px 0 0 2px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 160px;
+  white-space: nowrap;
+  text-align: left;
+}
+#transfer #transfer_connections .child table td:last-of-type {
+  text-align: right;
+}
+#transfer #transfer_connections .child table td:last-of-type i {
+  margin: 0;
+}
+#transfer #transfer_connections .child table td i {
+  margin-right: 10px;
+}
+#transfer #transfer_status {
+  height: 280px;
+  width: calc(100% + 4px);
+  background: #F4F4F4;
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  padding: 60px;
+}
+#transfer #transfer_status p {
+  opacity: 1;
+  margin: 0;
+}
+#transfer #transfer_status #transfer_controls {
+  position: absolute;
+  right: 60px;
+  top: -20px;
+}
+#transfer #transfer_status #transfer_controls i {
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  border-radius: 100px;
+  border: 2px #ddd solid;
+  text-align: center;
+  color: #ddd;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+}
+#transfer #transfer_status #file_transfer {
+  grid-template-columns: 25% 25% 25% 25%;
+  margin: 0 -15px;
+}
+#transfer #transfer_status #file_transfer .child {
+  margin: 0 15px;
+}
+#transfer #transfer_status #file_transfer .child .filename {
+  font-size: 13px;
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: middle;
+  width: 35%;
+}
+#transfer #transfer_status #file_transfer .child .progress_indicator {
+  width: calc(65% - 110px);
+  height: 8px;
+  border-radius: 100px;
+  background: #E5E5E5;
+  display: inline-block;
+  vertical-align: middle;
+}
+#transfer #transfer_status #file_transfer .child .progress_indicator .progress_finished {
+  height: 100%;
+  border-radius: 100px;
+  background: #6fa9ff;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+#transfer #transfer_status #file_transfer .child .progress_percent {
+  width: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+#transfer #transfer_status #file_transfer .child .progress_percent p {
+  font-size: 11px;
+  font-weight: 500;
+}
+#transfer #transfer_status #file_transfer .child .file_action {
+  color: #C4C4C4;
+  font-size: 13px;
+  width: 35px;
+  margin-left: 15px;
+  display: inline-block;
+}
+#transfer #transfer_status #file_transfer .child .file_action i {
+  margin-left: 5px;
+  cursor: pointer;
 }
 #main_sidebar {
   height: 100%;
@@ -651,5 +793,29 @@ body#dark #servermanager .server_action_dropdown li:hover {
 body#dark #servermanager .server_image {
   background: #474a54;
   opacity: 0.75;
+}
+body#dark #transfer #transfer_status {
+  background: #363940;
+}
+body#dark #transfer #transfer_controls i {
+  background: #363940;
+  border-color: #5e626a;
+}
+body#dark .modal .content {
+  background: #363940;
+}
+body#dark form input {
+  border-color: #C4C4C4;
+}
+body#dark ::-webkit-scrollbar {
+  background: transparent;
+  width: 5px;
+}
+body#dark ::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.3);
+}
+body#dark ::-webkit-scrollbar-track {
+  background: transparent;
 }
 /*# sourceMappingURL=all.css.map */

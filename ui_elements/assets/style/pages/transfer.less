@@ -1,0 +1,157 @@
+#transfer {
+  #transfer_connections {
+    display: flex !important;
+    margin: 0 -30px;
+    height: calc(~'100% - 420px');
+
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    .child {
+      margin: 0 30px;
+      flex: 1;
+
+      .objects {
+        overflow-y: auto;
+        max-height: calc(~'100% - 82px');
+      }
+
+      table {
+        width: 100%;
+        table-layout: fixed;
+
+        th {
+          text-align: left;
+          font-weight: normal;
+          color: @grey;
+          font-size: 13px;
+
+          &:last-of-type {
+            text-align: right;
+          }
+        }
+
+        td {
+          color: @grey;
+          font-size: 13px;
+          padding: 5px 0 0 2px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 160px;
+          white-space: nowrap;
+          text-align: left;
+
+          &:last-of-type {
+            text-align: right;
+
+            i {
+              margin: 0;
+            }
+          }
+
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  #transfer_status {
+    height: 280px;
+    width: calc(~'100% + 4px');
+    background: #F4F4F4;
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    padding: 60px;
+
+    p {
+      opacity: 1;
+      margin: 0;
+    }
+
+    #transfer_controls {
+      position: absolute;
+      right: 60px;
+      top: -20px;
+
+      i {
+        width: 40px;
+        height: 40px;
+        line-height: 36px;
+        border-radius: 100px;
+        border: 2px #ddd solid;
+        text-align: center;
+        color: #ddd;
+        background: white;
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 5px;
+      }
+    }
+
+    #file_transfer {
+      grid-template-columns: 25% 25% 25% 25%;
+      margin: 0 -15px;
+
+      .child {
+        margin: 0 15px;
+
+        .filename {
+          font-size: 13px;
+          display: inline-block;
+          margin-right: 15px;
+          vertical-align: middle;
+          width: 35%;
+        }
+
+        .progress_indicator {
+          width: calc(~'65% - 110px');
+          height: 8px;
+          border-radius: 100px;
+          background: #E5E5E5;
+          display: inline-block;
+          vertical-align: middle;
+
+          .progress_finished {
+            height: 100%;
+            border-radius: 100px;
+            background: #6fa9ff;
+            -webkit-transition: .3s;
+            -moz-transition: .3s;
+            -ms-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+          }
+        }
+
+        .progress_percent {
+          width: 22px;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 10px;
+
+          p {
+            font-size: 11px;
+            font-weight: 500;
+          }
+        }
+
+        .file_action {
+          color: @grey;
+          font-size: 13px;
+          width: 35px;
+          margin-left: 15px;
+          display: inline-block;
+
+          i {
+            margin-left: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

@@ -36,11 +36,11 @@
 
   &.macos {
     span {
-      width: 13px;
-      height: 13px;
+      width: 12px;
+      height: 12px;
       border-radius: 100px;
       display: inline-block;
-      margin-right: 5px;
+      margin-right: 3px;
       cursor: pointer;
     }
 
@@ -169,7 +169,7 @@ h3 {
 
     &.visible {
       opacity: 1;
-      transform: translate(-50%, -50%) scale(0.9);
+      transform: translate(-50%, -50%) scale(1);
     }
   }
 }
@@ -188,39 +188,23 @@ form {
     font-family: 'Open Sans', 'Arial', 'sans-serif';
     width: 100%;
     background: none;
-    border: none;
-    font-size: 13px;
-    padding: 10px 0 15px 0;
+    font-size: 12px;
+    padding: 7px;
     resize: vertical;
     outline: none;
     color: #979797;
-
-    &:focus + span:after {
-      transform: scaleX(1);
-      background: @blue;
-    }
-  }
-
-  span {
-    width: 100%;
-    height: 2px;
+    border: 2px #e9e9e9 solid;
+    margin: 5px 0 15px 0;
     display: block;
-    background: #ddd;
-    margin-bottom: 15px;
+    border-radius: 5px;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
 
-    &:after {
-      display: block;
-      width: 100%;
-      transform: scaleX(0);
-      margin-top: -2px;
-      content: '';
-      height: 2px;
-      transform-origin: left;
-      -webkit-transition: .5s transform;
-      -moz-transition: .5s transform;
-      -ms-transition: .5s transform;
-      -o-transition: .5s transform;
-      transition: .5s transform;
+    &:focus {
+      border-color: #afd3ff;
     }
   }
 
@@ -228,4 +212,11 @@ form {
     font-family: 'Open Sans', 'Arial', 'sans-serif';
     border: none;
   }
+}
+
+/* <---------------------------> */
+
+/* Grid */
+.grid {
+  display: grid;
 }

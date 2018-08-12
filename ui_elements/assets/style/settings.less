@@ -18,12 +18,34 @@ a {
 }
 
 main {
-  width: calc(~'100% - 350px');
+  width: calc(~'100% - 345px');
+  height: 100%;
   vertical-align: top;
   display: inline-block;
   padding: 60px;
+  position: relative;
 }
 
 header {
-  margin-bottom: 55px;
+  margin-bottom: 45px;
+
+  &.small {
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
 }
